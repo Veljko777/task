@@ -33,24 +33,32 @@
             </div>
         </div>
     </nav>
+
     <header class="header">
         <div class="flex-container">
             <div class="header-item-1">
                 <div><i class="fas fa-circle fa-xs"></i></div>
-                <div><i class="fas fa-circle "></i></div>
+                <div><i class="fas fa-circle fa-xs" id="active-dot"></i></div>
                 <div><i class="fas fa-circle fa-xs"></i></div>
                 <div><i class="fas fa-circle fa-xs"></i></div>
             </div>
             <div class="header-item-2">
                 <h3 class="header-text">G-SHOCK</h3>
-                <h1 class="header-title">Venice silver <br> automatic</h1>
+                <img class="header-title" src="./images/venica.png" alt="">
                 <div class="">
-                    <button class="explore-button">VIEW WATCH</button>Explore G-SHOCK <i class="fas fa-long-arrow-alt-right"></i>
+                    <button class="explore-button">VIEW WATCH</button><span class="explore-text">Explore G-SHOCK</span>  <img class="explore-img" src="./images/longrightarrow.png" alt=""></i>
                 </div>
-                <button><i class="fas fa-long-arrow-alt-left"></i></button>
-                <button><i class="fas fa-long-arrow-alt-right"></i></button>
-                <img class="slideshow-img" src="./images/watch1.png" alt="">
-                
+                <div class="slideshow">
+                    <div>
+                        <button  class="slideshow-btn1"><img src="./images/arrow left.png" alt=""></button >
+                    </div>
+                    <div>
+                        <button class="slideshow-btn2"><img src="./images/arrow right.png" alt=""></button>
+                    </div>
+                    <div class="slideshow-img">
+                        <img  src="./images/watch1.png" alt="">
+                    </div> 
+                </div>
             </div>
             <div class="header-item-3">
                 <img src="./images/watch1.png" alt="">
@@ -58,224 +66,253 @@
         </div>
     </header>
     <hr>
-    <section class="section-2">
+    <section class="filters">
         <div class="container">
             <div class="filter-section">
-                <input type="text" name="search-bar" id="search-bar" class="fas" placeholder="&#xf002; Type here to search..." >
-                <select name="brand" id="select-brand"></select>
-                <select name="colours" id="select-colours"></select>
-                <select name="material" id="select-material"></select>
-                <select name="features" id="select-features"></select>
-                <select name="price" id="select-price"></select>
-                <select name="gender" id="select-gender"></select>
+                <input type="text" name="search-bar" id="search-bar" class="fas" placeholder="&#xF002;   Type here to search..." >
+                <select name="brand" id="select-brand">
+                    <option value="Brand">Brand</option>
+                </select>
+                <select name="colours" id="select-colours">
+                    <option value="Colours">Colours</option>
+                </select>
+                <select name="material" id="select-material">
+                    <option value="Material">Material</option>
+                </select>
+                <select name="features" id="select-features">
+                    <option value="Features">Features</option>
+                </select>
+                <select name="price" id="select-price">
+                    <option value="Price">Price</option>
+                </select>
+                <select name="gender" id="select-gender">
+                    <option value="Gender">Gender</option>
+                </select>
             </div>
-            <div>
-                <button>Garmin <i class="fas fa-times"></i></button>
-                <button>Shock <i class="fas fa-times"></i></button>
-                <button>GPS <i class="fas fa-times"></i></button>
-                <button>Waterproof <i class="fas fa-times"></i></button>
+        </div>
+    </section>
+    <section class="section-2">
+        <div class="container">
+            <ul class="selected-filters">
+                <li class="selected-filters-item-1">
+                    <p>Garmin</p>
+                    <p class="x-btn"></p>
+                </li>
+                <li class="selected-filters-item-2">
+                    <p>G-Shock</p>
+                    <p class="x-btn"></p>
+                </li>
+                <li class="selected-filters-item-3">
+                    <p>GPS</p>
+                    <p class="x-btn"></p>
+                </li>
+                <li class="selected-filters-item-4">
+                    <p >Waterproof</p>
+                    <p class="x-btn"></p>
+                </li>
+            </ul>
+            <div class="collection">
+                <table >
+                    <thead >
+                        <tr>
+                            <th class="table-col1"></th >
+                            <th class="table-col2">Image</th>
+                            <th class="table-col3">Brand</th>
+                            <th class="table-col4">Item No.</th>
+                            <th class="table-col5">Listing</th>
+                            <th class="table-col6">Wholesale</th>
+                            <th class="table-col7">QTY</th>
+                            <th class="table-col8"></th>
+                            <th class="table-col9"></th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td><i class="far fa-star fa-xs"></i></td>
+                            <td><img src="./images/watch2.png" alt=""> </td>
+                            <td>
+                                <p>ALFRED SUNG</p>
+                                <p>Slim Collection Series 5</p>
+                            </td>
+                            <td>AS7104S6-1A</td>
+                            <td>$3,700.00</td>
+                            <td>$3,700.00</td>
+                            <td>
+                                <div>
+                                    <p>0</p>
+                                </div>
+                                <div>
+                                    <button><i class="fas fa-chevron-up"></i></button>
+                                    <button><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div><i class="fas fa-exclamation-circle"></i> Low on stock</div>
+                                <div><button>ADD <i class="fas fa-shopping-cart"></i></button></div>
+                            </td>
+                            <td><i class="fas fa-chevron-down"></i></td>
+                        </tr>
+                        <tr>
+                            <td><i class="far fa-star fa-xs"></i></td>
+                            <td><img src="./images/watch3.png" alt=""> </td>
+                            <td>
+                                <p>GARMIN</p>
+                                <p>Classic Collection</p>
+                            </td>
+                            <td>AW2304WE-9Q</td>
+                            <td>$4,200.00</td>
+                            <td>$4,000.00</td>
+                            <td>
+                                <div>
+                                    <p>4</p>
+                                </div>
+                                <div>
+                                    <button><i class="fas fa-chevron-up"></i></button>
+                                    <button><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </td>
+                            <td>
+                                
+                                <div><button>ADDED <i class="fas fa-check"></i></button></div>
+                            </td>
+                            <td><i class="fas fa-chevron-down"></i></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-star fa-xs"></i></td>
+                            <td><img src="./images/watch4.png" alt=""> </td>
+                            <td>
+                                <p>ALFRED SUNG</p>
+                                <p>Slim Collection Series 5</p>
+                            </td>
+                            <td>AS7104S6-1A</td>
+                            <td>$3,700.00</td>
+                            <td>$3,700.00</td>
+                            <td>
+                                <div>
+                                    <p>0</p>
+                                </div>
+                                <div>
+                                    <button><i class="fas fa-chevron-up"></i></button>
+                                    <button><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </td>
+                            <td>
+                                
+                                <div><button>ADD <i class="fas fa-shopping-cart"></i></button></div>
+                            </td>
+                            <td><i class="fas fa-chevron-down"></i></td>
+                        </tr>
+                        <tr>
+                            <td><i class="far fa-star fa-xs"></i></td>
+                            <td><img src="./images/watch5.png" alt=""> </td>
+                            <td>
+                                <p>WRANGLER</p>
+                                <p>Western Collection</p>
+                            </td>
+                            <td>AS7494SK-8R</td>
+                            <td>$5,600.00</td>
+                            <td>$5,200.00</td>
+                            <td>
+                                <div>
+                                    <p>0</p>
+                                </div>
+                                <div>
+                                    <button><i class="fas fa-chevron-up"></i></button>
+                                    <button><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </td>
+                            <td>
+                                
+                                <div><button>ADD <i class="fas fa-shopping-cart"></i></button></div>
+                            </td>
+                            <td><i class="fas fa-chevron-down"></i></td>
+                        </tr>
+                        <tr>
+                            <td><i class="far fa-star fa-xs"></i></td>
+                            <td><img src="./images/watch6.png" alt=""> </td>
+                            <td>
+                                <p>ALFRED SUNG</p>
+                                <p>Slim Collection Series 5</p>
+                            </td>
+                            <td>AS7104S6-1A</td>
+                            <td>$3,700.00</td>
+                            <td>$3,700.00</td>
+                            <td>
+                                <div>
+                                    <p>0</p>
+                                </div>
+                                <div>
+                                    <button><i class="fas fa-chevron-up"></i></button>
+                                    <button><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </td>
+                            <td>
+                                
+                                <div><i class="fas fa-shopping-cart"></i> OUT OF STOCK</div>
+                            </td>
+                            <td><i class="fas fa-chevron-down"></i></td>
+                        </tr>
+                        <tr>
+                            <td><i class="far fa-star fa-xs"></i></td>
+                            <td><img src="./images/watch7.png" alt=""> </td>
+                            <td>
+                                <p>GARMIN</p>
+                                <p>Classic Collection Series 6</p>
+                            </td>
+                            <td>AS2E0G8E-2U</td>
+                            <td>$2,100.00</td>
+                            <td>$2,000.00</td>
+                            <td>
+                                <div>
+                                    <p>0</p>
+                                </div>
+                                <div>
+                                    <button><i class="fas fa-chevron-up"></i></button>
+                                    <button><i class="fas fa-chevron-down"></i></button>
+                                </div>
+                            </td>
+                            <td>
+                                <div><button>ADD <i class="fas fa-shopping-cart"></i></button></div>
+                            </td>
+                            <td><i class="fas fa-chevron-down"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div>
-                <div class="collection">
-                    <div class="row">
-                        <div></div>
-                        <div>Image</div>
-                        <div>Brand</div>
-                        <div>Item No.</div>
-                        <div>Listing</div>
-                        <div>Wholesale</div>
-                        <div>QTY</div>
-                        <div></div>
-                        <div></div>
-                    </div>
-
-                    <div class="row">
-                        <div><i class="far fa-star"></i></div>
-                        <div><img src="./images/watch2.png" alt=""> </div>
-                        <div>
-                            <p>ALFRED SUNG</p>
-                            <p>Slim Collection Series 5</p>
-                        </div>
-                        <div>AS7104S6-1A</div>
-                        <div>$3,700.00</div>
-                        <div>$3,700.00</div>
-                        <div>
-                            <div>
-                                <p>0</p>
-                            </div>
-                            <div>
-                                <button><i class="fas fa-chevron-up"></i></button>
-                                <button><i class="fas fa-chevron-down"></i></button>
-                            </div>
-                        </div>
-                        <div>
-                            <div><i class="fas fa-exclamation-circle"></i> Low on stock</div>
-                            <div><button>ADD <i class="fas fa-shopping-cart"></i></button></div>
-                        </div>
-                        <div><i class="fas fa-chevron-down"></i></div>
-                    </div>
-
-                    <div class="row">
-                        <div><i class="far fa-star"></i></div>
-                        <div><img src="./images/watch3.png" alt=""> </div>
-                        <div>
-                            <p>GARMIN</p>
-                            <p>Classic Collection</p>
-                        </div>
-                        <div>AW2304WE-9Q</div>
-                        <div>$4,200.00</div>
-                        <div>$4,000.00</div>
-                        <div>
-                            <div>
-                                <p>4</p>
-                            </div>
-                            <div>
-                                <button><i class="fas fa-chevron-up"></i></button>
-                                <button><i class="fas fa-chevron-down"></i></button>
-                            </div>
-                        </div>
-                        <div>
-                            
-                            <div><button>ADDED <i class="fas fa-check"></i></button></div>
-                        </div>
-                        <div><i class="fas fa-chevron-down"></i></div>
-                    </div>
-                    <div class="row">
-                        
-                        <div><i class="fas fa-star"></i></div>
-                        <div><img src="./images/watch4.png" alt=""> </div>
-                        <div>
-                            <p>ALFRED SUNG</p>
-                            <p>Slim Collection Series 5</p>
-                        </div>
-                        <div>AS7104S6-1A</div>
-                        <div>$3,700.00</div>
-                        <div>$3,700.00</div>
-                        <div>
-                            <div>
-                                <p>0</p>
-                            </div>
-                            <div>
-                                <button><i class="fas fa-chevron-up"></i></button>
-                                <button><i class="fas fa-chevron-down"></i></button>
-                            </div>
-                        </div>
-                        <div>
-                            
-                            <div><button>ADD <i class="fas fa-shopping-cart"></i></button></div>
-                        </div>
-                        <div><i class="fas fa-chevron-down"></i></div>
-                    </div>
-                    <div class="row">
-                        <div><i class="far fa-star"></i></div>
-                        <div><img src="./images/watch5.png" alt=""> </div>
-                        <div>
-                            <p>WRANGLER</p>
-                            <p>Western Collection</p>
-                        </div>
-                        <div>AS7494SK-8R</div>
-                        <div>$5,600.00</div>
-                        <div>$5,200.00</div>
-                        <div>
-                            <div>
-                                <p>0</p>
-                            </div>
-                            <div>
-                                <button><i class="fas fa-chevron-up"></i></button>
-                                <button><i class="fas fa-chevron-down"></i></button>
-                            </div>
-                        </div>
-                        <div>
-                            
-                            <div><button>ADD <i class="fas fa-shopping-cart"></i></button></div>
-                        </div>
-                        <div><i class="fas fa-chevron-down"></i></div>
-                    </div>
-
-                    <div class="row">
-                        <div><i class="far fa-star"></i></div>
-                        <div><img src="./images/watch6.png" alt=""> </div>
-                        <div>
-                            <p>ALFRED SUNG</p>
-                            <p>Slim Collection Series 5</p>
-                        </div>
-                        <div>AS7104S6-1A</div>
-                        <div>$3,700.00</div>
-                        <div>$3,700.00</div>
-                        <div>
-                            <div>
-                                <p>0</p>
-                            </div>
-                            <div>
-                                <button><i class="fas fa-chevron-up"></i></button>
-                                <button><i class="fas fa-chevron-down"></i></button>
-                            </div>
-                        </div>
-                        <div>
-                            
-                            <div><i class="fas fa-shopping-cart"></i> OUT OF STOCK</div>
-                        </div>
-                        <div><i class="fas fa-chevron-down"></i></div>
-                    </div>
-
-                    <div class="row">
-
-                        <div><i class="far fa-star"></i></div>
-                        <div><img src="./images/watch7.png" alt=""> </div>
-                        <div>
-                            <p>GARMIN</p>
-                            <p>Classic Collection Series 6</p>
-                        </div>
-                        <div>AS2E0G8E-2U</div>
-                        <div>$2,100.00</div>
-                        <div>$2,000.00</div>
-                        <div>
-                            <div>
-                                <p>0</p>
-                            </div>
-                            <div>
-                                <button><i class="fas fa-chevron-up"></i></button>
-                                <button><i class="fas fa-chevron-down"></i></button>
-                            </div>
-                        </div>
-                        <div>
-                            
-                            <div><button>ADD <i class="fas fa-shopping-cart"></i></button></div>
-                        </div>
-                        <div><i class="fas fa-chevron-down"></i></div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
     <hr>
         <!-- end of section 2 -->
     <section class="section-3">
-        <div>
+        <div class="section3-img">
             <img src="./images/section3img1.png"  alt="">
         </div>
         <div class="section3-container">
             <div class="section3-text1">
-                <h2>Lorem Ipsum</h2>
-                <p>Visatech achieves 20-year milestone as market leader for Casio calculators, electronic organizers
-                    , musical instruments, audio equipment, digital cameras, and cash registers. Vistatech achieves 20-year milestone as
-                    market leader for Casio calculators, electronic organizers, musical instruments, audio equipment, digital cameras,
-                    and cash reqisters. Vistatech achieves 20-year milestone as market leader
+                <h1>Lorem Ipsum</h1>
+                <p>Vistatech achieves 20-year milestone as market leader for Casio calculators, <br>
+                    electronic organizers, musical instruments, audio equipment, digital <br> 
+                    cameras, and cash registers. Vistatech achieves 20-year milestone as market <br>
+                    leader for Casio calculators, electronic organizers, musical instruments, <br>
+                    audio equipment, digital cameras, and cash registers Vistatech achieves <br>
+                    20-year milestone as market leader
                 </p>
             </div>
         </div>
         <div class="section3-container">
             <div class="section3-text2">
-                <h2>Lorem Ipsum</h2>
-                <p>Visatech achieves 20-year milestone as market leader for Casio calculators, electronic organizers
-                    , musical instruments, audio equipment, digital cameras, and cash registers. Vistatech achieves 20-year milestone as
-                    market leader for Casio calculators, electronic organizers, musical instruments, audio equipment, digital cameras,
-                    and cash reqisters. Vistatech achieves 20-year milestone as market leader
+                <h1>Lorem Ipsum</h1>
+                <p>Vistatech achieves 20-year milestone as market leader for Casio calculators, <br>
+                    electronic organizers, musical instruments, audio equipment, digital <br> 
+                    cameras, and cash registers. Vistatech achieves 20-year milestone as market <br>
+                    leader for Casio calculators, electronic organizers, musical instruments, <br>
+                    audio equipment, digital cameras, and cash registers Vistatech achieves <br> 
+                    20-year milestone as market leader
                 </p>
             </div>
         </div>
-        <div>
+        <div class="section3-img">
             <img src="./images/section3img2.png"  alt="">
         </div>
     </section>
@@ -284,10 +321,10 @@
             <div>
                 <div>
                     <h2>LINKS</h2>
-                    <a href="#">COMPANY</a>
-                    <a href="#">CATALOGS</a>
-                    <a href="#">Find a dealer</a>
-                    <a href="#">Login/Register</a>
+                    <div><a href="#">COMPANY</a></div>
+                    <div><a href="#">CATALOGS</a></div>
+                    <div><a href="#">Find a dealer</a></div>
+                    <div><a href="#">Login/Register</a></div>
                 </div>
             </div>
             <div>
@@ -307,12 +344,13 @@
                 </div>
             </div>
         </div>
+        <div class="copyrights">
+            <i class="far fa-copyright"></i> DEVTEST - 2019 All Right Reserved.
+        </div>
+
         
         
     </footer>
-    <h1>sdklfjsdkl</h1>
-    <h1>sdklfjsdkl</h1>
-    <h1>sdklfjsdkl</h1>
     <h1>sdklfjsdkl</h1>
     <h1>sdklfjsdkl</h1>
     <h1>sdklfjsdkl</h1>
