@@ -14,19 +14,26 @@ a {
   text-decoration: none;
 }
 
+hr {
+  background-color: #2f4061;
+  height: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 75%;
+  margin: auto;
+  height: 100%;
+}
+
 .navbar {
   height: 77px;
   -webkit-box-shadow: 0px 0px 20px #dfd3c7;
           box-shadow: 0px 0px 20px #dfd3c7;
 }
 
-.navbar .container {
-  max-width: 75%;
-  margin: auto;
-  height: 100%;
-}
-
-.navbar .container .flex-container {
+.navbar .flex-container {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -37,87 +44,88 @@ a {
           align-items: center;
 }
 
-.navbar .container .flex-container div {
-  height: 100%;
-}
-
-.navbar .container .flex-container .logo {
+.navbar .flex-container .logo {
   padding-left: 14.6px;
   padding-right: 49.5px;
   padding-top: 16px;
+  height: 100%;
   border-right: 1px solid #e6e6e6;
 }
 
-.navbar .container .flex-container .logo a {
+.navbar .flex-container .logo a {
   color: #304061;
   font-family: "OpenSans";
 }
 
-.navbar .container .flex-container .logo .text-logo {
+.navbar .flex-container .logo .text-logo {
   padding-top: 16px;
   font-size: 26px;
   font-weight: bold;
   letter-spacing: 11px;
 }
 
-.navbar .container .flex-container .logo .sub-text-logo {
+.navbar .flex-container .logo .sub-text-logo {
   font-size: 11px;
   letter-spacing: 6px;
 }
 
-.navbar .container .flex-container .nav-item-2 {
+.navbar .flex-container .nav-item-2 {
   padding-left: 34.5px;
   padding-right: 29px;
   padding-top: 27.5px;
+  height: 100%;
   border-right: 1px solid #e6e6e6;
 }
 
-.navbar .container .flex-container .nav-item-2 a {
+.navbar .flex-container .nav-item-2 a {
   text-shadow: 0px 0px 0.1px #304061;
   color: #304061;
   letter-spacing: 3.9px;
   font-size: 17px;
 }
 
-.navbar .container .flex-container .nav-item-3 {
+.navbar .flex-container .nav-item-3 {
   padding-left: 35px;
   padding-right: 329px;
   padding-top: 27.5px;
+  height: 100%;
   display: inline;
   border-right: 1px solid #e6e6e6;
 }
 
-.navbar .container .flex-container .nav-item-3 a {
+.navbar .flex-container .nav-item-3 a {
   font-size: 15.5px;
   letter-spacing: 0.63px;
   color: #ab866e;
 }
 
-.navbar .container .flex-container .nav-item-3 i {
+.navbar .flex-container .nav-item-3 i {
   padding-left: 4px;
   padding-top: 5px;
   font-size: 11px;
 }
 
-.navbar .container .flex-container .nav-item-4 {
+.navbar .flex-container .nav-item-4 {
   padding-left: 32px;
-  padding-right: 43.5px;
+  padding-right: 43px;
   padding-top: 29px;
+  height: 100%;
 }
 
-.navbar .container .flex-container .nav-item-4 a {
+.navbar .flex-container .nav-item-4 a {
   font-size: 16px;
   color: #ab866e;
 }
 
-.navbar .container .flex-container .nav-item-5 {
+.navbar .flex-container .nav-item-5 {
   padding-left: 0;
   padding-right: 29px;
   padding-top: 17px;
+  height: 100%;
   border-right: 1px solid #e6e6e6;
 }
 
-.navbar .container .flex-container .nav-item-5 p {
+.navbar .flex-container .nav-item-5 p {
   color: #ab866e;
   font-size: 18px;
   font-weight: 700;
@@ -125,37 +133,39 @@ a {
   padding: 0;
 }
 
-.navbar .container .flex-container .nav-item-5 .nav-total {
+.navbar .flex-container .nav-item-5 .nav-total {
   color: #7583a0;
   font-size: 12px;
   letter-spacing: -0.2px;
   padding-bottom: 2px;
 }
 
-.navbar .container .flex-container .nav-item-6 {
+.navbar .flex-container .nav-item-6 {
   padding-left: 32px;
   padding-right: 0px;
   padding-top: 24px;
+  height: 100%;
 }
 
-.navbar .container .flex-container .nav-item-6 .avatar-icon {
+.navbar .flex-container .nav-item-6 .avatar-icon {
   font-size: 27px;
   color: #ab866e;
 }
 
-.navbar .container .flex-container .nav-item-7 {
+.navbar .flex-container .nav-item-7 {
   padding-left: 6px;
   padding-right: 0px;
   padding-top: 26.5px;
+  height: 100%;
 }
 
-.navbar .container .flex-container .nav-item-7 a {
+.navbar .flex-container .nav-item-7 a {
   font-size: 18px;
   color: #304061;
   font-weight: 700;
 }
 
-.navbar .container .flex-container .nav-item-7 a i {
+.navbar .flex-container .nav-item-7 a i {
   padding-left: 2px;
   font-size: 12px;
 }
@@ -163,10 +173,121 @@ a {
 .header {
   background: url("../images/header background.png") bottom;
   background-size: cover;
-  min-height: 733px;
+  height: 733px;
+}
+
+.header .flex-container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .flex-container .header-item-1 {
+  padding-left: 55px;
+  padding-bottom: 86px;
+}
+
+.header .flex-container .header-item-1 div {
+  padding-top: 19px;
+  text-align: end;
+}
+
+.header .flex-container .header-item-2 {
+  padding-left: 183px;
+  padding-bottom: 122px;
+  letter-spacing: 1.7px;
+}
+
+.header .flex-container .header-item-2 .header-text {
+  padding-bottom: 22px;
+}
+
+.header .flex-container .header-item-2 .header-title {
+  font-size: 80px;
+  color: #304061;
+  line-height: 1.1;
+  padding-bottom: 140px;
+  letter-spacing: 2px;
+}
+
+.header .flex-container .header-item-2 .explore-button {
+  border: none;
+  background-color: yellow;
+  color: #304061;
+  margin-left: 3.5px;
+  padding: 26.5px 39px 21.5px 50px;
+  letter-spacing: 4.8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.header .flex-container .header-item-2 .slideshow-img {
+  max-width: 50px;
 }
 
 .header h1 {
   margin: 0;
+}
+
+.filter-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+.filter-section #search-bar {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1/span 6;
+}
+
+.collection .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[9];
+      grid-template-columns: repeat(9, 1fr);
+}
+
+.collection p {
+  margin: 0;
+}
+
+.section-3 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+}
+
+.section-3 .section3-container {
+  position: relative;
+}
+
+.section-3 .section3-container .section3-text1 {
+  background-color: grey;
+  position: absolute;
+  top: 45%;
+  left: -10%;
+}
+
+.section-3 .section3-container .section3-text2 {
+  background-color: grey;
+  position: absolute;
+  top: 45%;
+  right: -10%;
+}
+
+.grid-footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
