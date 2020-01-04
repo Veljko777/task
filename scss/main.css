@@ -62,10 +62,10 @@ hr {
 .navbar .flex-container .logo a {
   color: #304061;
   font-family: "OpenSans";
+  display: block;
 }
 
 .navbar .flex-container .logo .text-logo {
-  padding-top: 16px;
   font-size: 26px;
   font-weight: bold;
   letter-spacing: 11px;
@@ -422,11 +422,11 @@ hr {
 
 .collection {
   padding-top: 28px;
+  min-height: 738px;
 }
 
 .collection table {
   width: 97.95%;
-  height: 710px;
   margin: auto;
   border-collapse: collapse;
 }
@@ -442,10 +442,542 @@ hr {
 .collection table thead tr th {
   color: #75839d;
   padding-bottom: 12px;
+  letter-spacing: 0.25px;
 }
 
 .collection table thead tr .table-col1 {
-  width: 100px;
+  width: 83.5px;
+}
+
+.collection table thead tr .table-col2 {
+  width: 92px;
+}
+
+.collection table thead tr .table-col3 {
+  width: 308px;
+}
+
+.collection table thead tr .table-col4 {
+  width: 246px;
+}
+
+.collection table thead tr .table-col5 {
+  width: 174px;
+}
+
+.collection table thead tr .table-col6 {
+  width: 193px;
+}
+
+.collection table thead tr .table-col7 {
+  width: 101px;
+  padding-left: 2px;
+}
+
+.collection table thead tr .table-col8 {
+  width: 160px;
+}
+
+.collection table tbody td {
+  color: #a6826a;
+}
+
+.collection table tbody p {
+  margin: 0;
+  padding-left: 1px;
+}
+
+.collection table tbody h3, .collection table tbody h5 {
+  margin: 0;
+  color: #304061;
+  letter-spacing: 0.85px;
+  padding-left: 0.5px;
+}
+
+.collection table tbody h5 {
+  letter-spacing: 0.65px;
+}
+
+.collection table tbody .low-stock {
+  height: 11px;
+  text-align: end;
+  font-size: 13px;
+  color: #d67419;
+  padding-right: 38px;
+  padding-top: 8px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  word-spacing: 0.3px;
+}
+
+.collection table tbody .low-stock i {
+  padding-right: 3.5px;
+  font-size: 14px;
+}
+
+.collection table tbody .table-row1 td {
+  padding-bottom: 4px;
+}
+
+.collection table tbody .table-row1 td:first-child {
+  padding-bottom: 5px;
+  padding-left: 34px;
+}
+
+.collection table tbody .table-row1 img {
+  padding-top: 8px;
+  padding-left: 3px;
+}
+
+.collection table tbody .table-row1 h3 {
+  padding-bottom: 3px;
+}
+
+.collection table tbody .table-row1 h5 {
+  padding-left: 1.5px;
+  padding-top: 7px;
+}
+
+.collection table tbody .table-row1 .listing, .collection table tbody .table-row1 .wholesale, .collection table tbody .table-row1 #marked-row .wholesale, #marked-row .collection table tbody .table-row1 .wholesale {
+  padding-top: 7px;
+  padding-left: 1.5px;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+}
+
+.collection table tbody .table-row1 .inc-dec-button div {
+  padding-top: 23px;
+  padding-left: 1px;
+}
+
+.collection table tbody .table-row1 .inc-dec-button div:first-child {
+  padding-top: 30px;
+  padding-left: 0px;
+}
+
+.collection table tbody .table-row1 td:nth-child(8) {
+  padding-left: 10px;
+}
+
+.collection table tbody .table-row1 td:nth-child(8) div:first-child {
+  padding-top: 4px;
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+.collection table tbody .table-row1 td:nth-child(9) {
+  padding-top: 7px;
+  padding-left: 14px;
+  font-size: 11.5px;
+}
+
+.collection table tbody .table-row3 td, .collection table tbody .table-row2 td {
+  padding-bottom: 4px;
+}
+
+.collection table tbody .table-row3 td:first-child, .collection table tbody .table-row2 td:first-child {
+  padding-bottom: 9px;
+  padding-left: 34px;
+}
+
+.collection table tbody .table-row3 img, .collection table tbody .table-row2 img {
+  padding-top: 6px;
+  padding-left: 3px;
+}
+
+.collection table tbody .table-row3 h3, .collection table tbody .table-row2 h3 {
+  padding-bottom: 3px;
+}
+
+.collection table tbody .table-row3 .table-subtext, .collection table tbody .table-row2 .table-subtext {
+  padding-bottom: 3px;
+  padding-left: 0.5px;
+}
+
+.collection table tbody .table-row3 h5, .collection table tbody .table-row2 h5 {
+  padding-left: 1.5px;
+  padding-top: 6px;
+}
+
+.collection table tbody .table-row3 .listing, .collection table tbody .table-row2 .listing, .collection table tbody .table-row3 .wholesale, .collection table tbody .table-row2 .wholesale, .collection table tbody .table-row3 #marked-row .wholesale, #marked-row .collection table tbody .table-row3 .wholesale, .collection table tbody .table-row2 #marked-row .wholesale, #marked-row .collection table tbody .table-row2 .wholesale {
+  padding-top: 6px;
+  padding-left: 1.5px;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+}
+
+.collection table tbody .table-row3 .inc-dec-button div, .collection table tbody .table-row2 .inc-dec-button div {
+  padding-top: 22px;
+  padding-left: 1px;
+}
+
+.collection table tbody .table-row3 .inc-dec-button div:first-child, .collection table tbody .table-row2 .inc-dec-button div:first-child {
+  padding-top: 28px;
+  padding-left: 0px;
+}
+
+.collection table tbody .table-row3 td:nth-child(8), .collection table tbody .table-row2 td:nth-child(8) {
+  padding-left: 10px;
+}
+
+.collection table tbody .table-row3 td:nth-child(8) div:first-child, .collection table tbody .table-row2 td:nth-child(8) div:first-child {
+  padding-top: 3px;
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+.collection table tbody .table-row3 td:nth-child(9), .collection table tbody .table-row2 td:nth-child(9) {
+  padding-top: 5px;
+  padding-left: 14px;
+  font-size: 11.5px;
+}
+
+.collection table tbody .table-row4 td, .collection table tbody .table-row5 td {
+  padding-bottom: 4px;
+}
+
+.collection table tbody .table-row4 td:first-child, .collection table tbody .table-row5 td:first-child {
+  padding-top: 10px;
+  padding-left: 34px;
+}
+
+.collection table tbody .table-row4 img, .collection table tbody .table-row5 img {
+  padding-top: 20px;
+  padding-left: 2px;
+}
+
+.collection table tbody .table-row4 h3, .collection table tbody .table-row5 h3 {
+  padding-top: 14px;
+  padding-bottom: 3px;
+}
+
+.collection table tbody .table-row4 .table-subtext, .collection table tbody .table-row5 .table-subtext {
+  padding-bottom: 3px;
+  padding-left: 0.5px;
+}
+
+.collection table tbody .table-row4 h5, .collection table tbody .table-row5 h5 {
+  padding-left: 1.5px;
+  padding-top: 20px;
+}
+
+.collection table tbody .table-row4 .listing, .collection table tbody .table-row5 .listing, .collection table tbody .table-row4 .wholesale, .collection table tbody .table-row5 .wholesale, .collection table tbody .table-row4 #marked-row .wholesale, #marked-row .collection table tbody .table-row4 .wholesale, .collection table tbody .table-row5 #marked-row .wholesale, #marked-row .collection table tbody .table-row5 .wholesale {
+  padding-top: 20px;
+  padding-left: 1.5px;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+}
+
+.collection table tbody .table-row4 .inc-dec-button div, .collection table tbody .table-row5 .inc-dec-button div {
+  padding-top: 35px;
+  padding-left: 1px;
+}
+
+.collection table tbody .table-row4 .inc-dec-button div:first-child, .collection table tbody .table-row5 .inc-dec-button div:first-child {
+  padding-top: 42px;
+  padding-left: 0px;
+}
+
+.collection table tbody .table-row4 td:nth-child(8), .collection table tbody .table-row5 td:nth-child(8) {
+  padding-left: 10px;
+}
+
+.collection table tbody .table-row4 td:nth-child(8) div:first-child, .collection table tbody .table-row5 td:nth-child(8) div:first-child {
+  padding-top: 16px;
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+.collection table tbody .table-row4 td:nth-child(9), .collection table tbody .table-row5 td:nth-child(9) {
+  padding-top: 18px;
+  padding-left: 14px;
+  font-size: 11.5px;
+}
+
+.collection table tbody .table-row5 img {
+  padding-left: 3px;
+}
+
+.collection table tbody .table-row6 td {
+  padding-bottom: 4px;
+}
+
+.collection table tbody .table-row6 td:first-child {
+  padding-top: 9px;
+  padding-left: 34px;
+}
+
+.collection table tbody .table-row6 img {
+  padding-top: 18px;
+  padding-left: 5px;
+}
+
+.collection table tbody .table-row6 h3 {
+  padding-top: 14px;
+  padding-bottom: 3px;
+}
+
+.collection table tbody .table-row6 .table-subtext {
+  padding-bottom: 3px;
+  padding-left: 0.5px;
+}
+
+.collection table tbody .table-row6 h5 {
+  padding-left: 1.5px;
+  padding-top: 19px;
+  letter-spacing: 0.82px;
+}
+
+.collection table tbody .table-row6 .listing, .collection table tbody .table-row6 .wholesale, .collection table tbody .table-row6 #marked-row .wholesale, #marked-row .collection table tbody .table-row6 .wholesale {
+  padding-top: 19px;
+  padding-left: 1.5px;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+}
+
+.collection table tbody .table-row6 .inc-dec-button div {
+  padding-top: 35px;
+  padding-left: 1px;
+}
+
+.collection table tbody .table-row6 .inc-dec-button div:first-child {
+  padding-top: 42px;
+  padding-left: 0px;
+}
+
+.collection table tbody .table-row6 td:nth-child(8) {
+  padding-left: 10px;
+}
+
+.collection table tbody .table-row6 td:nth-child(8) div:first-child {
+  padding-top: 16px;
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+.collection table tbody .table-row6 td:nth-child(9) {
+  padding-top: 18px;
+  padding-left: 14px;
+  font-size: 11.5px;
+}
+
+.collection table tbody .inc-dec-button {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 14% 86%;
+      grid-template-columns: 14% 86%;
+}
+
+.collection table tbody .increase-btn, .collection table tbody .decrease-btn {
+  border: none;
+  display: block;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.collection table tbody .increase-btn i, .collection table tbody .decrease-btn i {
+  color: #ab866e;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.collection table tbody .add-to-cart-button, .collection table tbody .added-to-cart-button {
+  background-color: #304061;
+  color: white;
+  letter-spacing: 5.8px;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  padding: 18px 22px 16px 30px;
+}
+
+.collection table tbody .added-to-cart-button {
+  padding: 17px 9px 17px 21px;
+  background-color: #546b95;
+  letter-spacing: 5.5px;
+  font-weight: 300;
+}
+
+.collection table tbody .added-to-cart-button i {
+  padding-left: 4px;
+}
+
+#marked-row {
+  border: 1px solid #ddccb8;
+  border-bottom: none;
+  -webkit-box-shadow: 0px -10px 20px #ddccb844;
+          box-shadow: 0px -10px 20px #ddccb844;
+}
+
+#marked-row td {
+  padding-bottom: 4px;
+}
+
+#marked-row td:first-child {
+  padding-left: 33px;
+}
+
+#marked-row td:first-child i {
+  padding-bottom: 4px;
+}
+
+#marked-row img {
+  padding-top: 20px;
+  padding-left: 3px;
+  padding-bottom: 13px;
+}
+
+#marked-row h3 {
+  padding-bottom: 3px;
+}
+
+#marked-row h5 {
+  padding-left: 1.5px;
+  padding-top: 7px;
+  letter-spacing: 0.75px;
+}
+
+#marked-row .listing, #marked-row .wholesale {
+  padding-top: 7px;
+  padding-left: 1.5px;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+}
+
+#marked-row .inc-dec-button div {
+  padding-top: 36px;
+  padding-left: 1px;
+}
+
+#marked-row .inc-dec-button div:first-child {
+  padding-top: 42px;
+  padding-left: 0px;
+}
+
+#marked-row td:nth-child(8) {
+  padding-left: 10px;
+}
+
+#marked-row td:nth-child(8) div:first-child {
+  padding-top: 4px;
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+#marked-row td:nth-child(9) {
+  padding-top: 7px;
+  padding-left: 13.5px;
+  font-size: 11.5px;
+}
+
+#extra-info {
+  border: 1px solid #ddccb8;
+  border-top: 1px solid #e4e4e4;
+  -webkit-box-shadow: 0px 10px 20px #ddccb844;
+          box-shadow: 0px 10px 20px #ddccb844;
+  font-size: 14px;
+}
+
+#extra-info div {
+  color: #77829e;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#extra-info div .show-color {
+  color: black;
+  font-size: 13px;
+}
+
+#extra-info div:nth-child(2) p {
+  padding-bottom: 4px;
+  padding-left: 60px;
+}
+
+#extra-info div:nth-child(2) p i {
+  padding-left: 4px;
+}
+
+#extra-info div:nth-child(3) p {
+  padding-bottom: 4px;
+  padding-left: 9px;
+}
+
+#extra-info div:nth-child(4) p {
+  padding-bottom: 4px;
+  padding-left: 3px;
+}
+
+#extra-info div:nth-child(5) p {
+  padding-bottom: 4px;
+  padding-left: 11px;
+}
+
+#extra-info div:nth-child(6) button {
+  padding-bottom: 3px;
+  padding-left: 145px;
+}
+
+#extra-info div:nth-child(6) button i {
+  font-size: 15px;
+}
+
+#extra-info .extra-info-parts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 235.05px 241.72px 160px 320px auto auto;
+      grid-template-columns: 235.05px 241.72px 160px 320px auto auto;
+}
+
+#extra-info .extra-info-links {
+  padding-top: 14px;
+  padding-bottom: 13px;
+  padding-left: 92px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
+}
+
+#extra-info .extra-info-links button {
+  max-width: 10px;
+  border: none;
+  background-color: white;
+  padding: 0;
+}
+
+#extra-info .extra-info-links button:nth-child(2) {
+  padding-top: 1px;
+}
+
+#extra-info .extra-info-links button:nth-child(2) a {
+  padding-left: 4px;
+}
+
+#extra-info .extra-info-links button:nth-child(3) {
+  padding-top: 1px;
+}
+
+#extra-info .extra-info-links button:nth-child(3) a {
+  padding-left: 7px;
+}
+
+#extra-info .extra-info-links button:nth-child(4) {
+  padding-top: 1px;
+}
+
+#extra-info .extra-info-links button:nth-child(4) a {
+  padding-left: 10px;
+}
+
+#extra-info .extra-info-external-link {
+  border: none;
+  background-color: white;
+  padding: 0;
+}
+
+#extra-info .extra-info-external-link a {
+  color: #936d56;
 }
 
 .section-3 {
@@ -511,6 +1043,11 @@ hr {
   color: white;
 }
 
+footer {
+  background-color: #f5f1ee;
+  padding-top: 90px;
+}
+
 .grid-footer {
   display: -ms-grid;
   display: grid;
@@ -518,7 +1055,65 @@ hr {
       grid-template-columns: repeat(3, 1fr);
 }
 
+.grid-footer h2 {
+  font-family: "Georgia", serif;
+  color: #304061;
+  font-size: 28px;
+}
+
+.grid-footer .footer-item-1 .footer-links {
+  padding-left: 168px;
+  letter-spacing: 9.1px;
+}
+
+.grid-footer .footer-item-1 div {
+  text-align: center;
+}
+
+.grid-footer .footer-item-1 .footer-links-item-1 {
+  padding-right: 10px;
+  padding-top: 21px;
+}
+
+.grid-footer .footer-item-1 .footer-links-item-1 a {
+  color: #304061;
+  font-size: 18px;
+  letter-spacing: 3.2px;
+}
+
+.grid-footer .footer-item-1 .footer-links-item-2 {
+  padding-top: 17px;
+  padding-right: 8px;
+}
+
+.grid-footer .footer-item-1 .footer-links-item-2 a {
+  color: #ab866e;
+  font-size: 18px;
+  letter-spacing: 3.3px;
+}
+
+.grid-footer .footer-item-1 .footer-links-item-3 {
+  padding-top: 22px;
+  padding-right: 13px;
+}
+
+.grid-footer .footer-item-1 .footer-links-item-3 a {
+  color: #304061;
+  font-size: 16.5px;
+}
+
+.grid-footer .footer-item-1 .footer-links-item-4 {
+  padding-top: 16px;
+  padding-right: 13px;
+}
+
+.grid-footer .footer-item-1 .footer-links-item-4 a {
+  color: #304061;
+  font-size: 16.2px;
+}
+
 .copyrights {
   text-align: center;
+  color: #304061;
 }
 /*# sourceMappingURL=main.css.map */
