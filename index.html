@@ -7,6 +7,7 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./scss/main.css">
     <script src="https://kit.fontawesome.com/bcf872f608.js" crossorigin="anonymous"></script>
     
@@ -22,12 +23,27 @@
                 </div>
                 <div class="nav-item-2"><a href="#">BROWSE PRODUCTS</a></div>
                 <div class="nav-item-3"><a href="#">Company info <i class="fas fa-chevron-down fa-xs"></i></a></div>
-                <div class="nav-item-4"><a href="#"><i class="fas fa-shopping-cart"></i></a></div>
+                <div class="nav-item-4"><a class="nav-cart-icon" href="#"><i class="fas fa-shopping-cart"></i><span id="cart-items-number">1</span></a>
+                    <div id="cart-items-list">
+                        <div class="cart-grid">
+                            <div><img src="./images/watch2.png" alt=""></div>
+                            <div class="cart-text">
+                                <h3>ALFRED SUNG</h3>
+                                <p>Slim Collection Series 5</p>
+                            </div>
+                            <div class="cart-mark"><h5>AS7104SL-1A</h5></div>
+                            <div class="x-btn"></div>
+                            <div class="edge">&#9670;</div>
+                        </div>
+                        <div class="cart-message"><p>Has been successfully added to your cart!</p></div>
+                    </div>
+                </div>
                 <div class="nav-item-5">
                     <p class="nav-total">Total:</p>
                     <p>$11.800,00</p>
                 </div>
                 <div class="nav-item-6"><i class="far fa-user-circle avatar-icon"></i></div>
+
                 <div class="nav-item-7">
                     <a href="#"> Company Name  <i class="fas fa-chevron-down"></i></a></div>
             </div>
@@ -44,24 +60,24 @@
             </div>
             <div class="header-item-2">
                 <h3 class="header-text">G-SHOCK</h3>
-                <img class="header-title" src="./images/venica.png" alt="">
+                <h1 class="header-title">Venice silver automatic</h1>
                 <div class="">
-                    <button class="explore-button">VIEW WATCH</button><span class="explore-text">Explore G-SHOCK</span>  <img class="explore-img" src="./images/longrightarrow.png" alt=""></i>
+                    <button class="explore-button">VIEW WATCH</button><span class="explore-text">Explore <span class="explore-text1">G-SHOCK</span> </span>  <img class="explore-img" src="./images/longrightarrow.png" alt=""></i>
                 </div>
                 <div class="slideshow">
                     <div>
-                        <button  class="slideshow-btn1"><img src="./images/arrow left.png" alt=""></button >
+                        <button onclick="previousSlide()" onmouseover="previousPreview()" onmouseout="exitPreview()"  class="slideshow-btn1"><img src="./images/arrow left.png" alt=""></button onmouseover="previewPicture()" >
                     </div>
                     <div>
-                        <button class="slideshow-btn2"><img src="./images/arrow right.png" alt=""></button>
+                        <button class="slideshow-btn2" onclick="nextSlide()" onmouseover="nextPreview()" onmouseout="exitPreview()"><img src="./images/arrow right.png" alt=""></button>
                     </div>
                     <div class="slideshow-img">
-                        <img  src="./images/watch1.png" alt="">
+                        <img class="current-slideshow-image"  src="./images/watch1.png" alt="">
                     </div> 
                 </div>
             </div>
             <div class="header-item-3">
-                <img src="./images/watch1.png" alt="">
+                <img class="main-slideshow-image" src="./images/watch1.png" alt="">
             </div>
         </div>
     </header>
@@ -69,24 +85,30 @@
     <section class="filters">
         <div class="container">
             <div class="filter-section">
-                <input type="text" name="search-bar" id="search-bar" class="fas" placeholder="&#xF002;   Type here to search..." >
-                <select name="brand" id="select-brand">
-                    <option value="Brand">Brand</option>
+                <input type="text" name="search-bar" id="search-bar" class="fas" placeholder="Type here to search..." >
+                <select name="brand" class="select">
+                    <option value="0">Brand</option>
+                    <option value="something1">Something</option>
                 </select>
-                <select name="colours" id="select-colours">
-                    <option value="Colours">Colours</option>
+                <select name="colours" class="select">
+                    <option value="0">Colours</option>
+                    <option value="something2">Something1</option>
                 </select>
-                <select name="material" id="select-material">
-                    <option value="Material">Material</option>
+                <select name="material"  class="select">
+                    <option value="0">Material</option>
+                    <option value="something3">Something2</option>
                 </select>
-                <select name="features" id="select-features">
-                    <option value="Features">Features</option>
+                <select name="features"  class="select">
+                    <option value="0">Features</option>
+                    <option value="something4">Something3</option>
                 </select>
-                <select name="price" id="select-price">
-                    <option value="Price">Price</option>
+                <select name="price"  class="select">
+                    <option value="0">Price</option>
+                    <option value="something5">Something4</option>
                 </select>
-                <select name="gender" id="select-gender">
-                    <option value="Gender">Gender</option>
+                <select name="gender"  class="select">
+                    <option value="0">Gender</option>
+                    <option value="something6">Something5</option>
                 </select>
             </div>
         </div>
@@ -137,8 +159,8 @@
                         <tr>
                             <td colspan="8"><div class="low-stock"><i class="fas fa-info-circle"></i></i> Low on stock</div></td>
                         </tr>
-                        <tr class="table-row1">
-                            <td><i class="far fa-star fa-xs"></i></td>
+                        <tr onclick="toggleExtraInfo('ei1', this)" class="table-row1">
+                            <td><i class="far fa-star fa-xs" id="product-star"></i></td>
                             <td>
                                 <img src="./images/watch2.png" alt="">
                                  </td>
@@ -161,10 +183,41 @@
                             <td>
                                 <div><button class="add-to-cart-button">ADD <i class="fas fa-shopping-cart"></i></button></div>
                             </td>
-                            <td><i class="fas fa-chevron-down"></i></td>
+                            <td><i class="fas fa-chevron-down expend-icon"></i></td>
                         </tr>
-                        <tr class="table-row2" id="marked-row">
-                            <td><i class="far fa-star fa-xs"></i></td>
+                        <tr id="ei1" style="display: none;">
+                            <td  colspan="9" >
+                                <div class="extra-info-parts">
+                                    <div>
+                                        <div class="extra-info-links">
+                                            <button><a href="#"><img src="./images/something2.png" alt=""></a> </button>
+                                            <button><a href="#"><img src="./images/something1.png" alt=""></a> </button>
+                                            <button><a href="#"><img src="./images/something3.png" alt=""></a></button>
+                                            <button><a href="#"><img src="./images/something4.png" alt=""></a></button>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <p>Color: Black <i class="fas fa-circle show-color"></i></p>
+                                    </div>
+                                    <div>
+                                        <p>Band: Solid </p>
+                                    </div>
+                                    <div>
+                                        <p>Case / bezel material: Titanium / Cobarion</p>
+                                    </div>
+                                    <div>
+                                        <p>Features: GPS, Waterproof, Bluetooth</p>
+                                    </div>
+                                    <div>
+                                        <button class="extra-info-external-link"><a href="https://www.google.com/?hl=sr" target="_blank"><i class="fas fa-external-link-alt"></i></a></button>
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr onclick="toggleExtraInfo('ei2', this)" class="table-row2" id="marked-row">
+                            <td><i class="far fa-star fa-xs" id="product-star"></i></td>
                             <td><img src="./images/watch3.png" alt=""> </td>
                             <td>
                                 <h3>GARMIN</h3>
@@ -188,7 +241,7 @@
                             </td>
                             <td><i class="fas fa-chevron-up"></i></td>
                         </tr>
-                        <tr id="extra-info">
+                        <tr id="ei2">
                             <td  colspan="9" >
                                 <div class="extra-info-parts">
                                     <div>
@@ -207,21 +260,21 @@
                                         <p>Band: Solid </p>
                                     </div>
                                     <div>
-                                        <p>Case / bazel material: Titanium / Cobarion</p>
+                                        <p>Case / bezel material: Titanium / Cobarion</p>
                                     </div>
                                     <div>
                                         <p>Features: GPS, Waterproof, Bluetooth</p>
                                     </div>
                                     <div>
-                                        <button class="extra-info-external-link"><a href="#"><i class="fas fa-external-link-alt"></i></a></button>
+                                        <button class="extra-info-external-link"><a href="https://www.google.com/?hl=sr" target="_blank"><i class="fas fa-external-link-alt"></i></a></button>
                                     </div>
 
                                 </div>
                             </td>
                         </tr>
 
-                        <tr class="table-row3">
-                            <td><i class="fas fa-star fa-xs"></i></td>
+                        <tr class="table-row3" onclick="toggleExtraInfo('ei3', this)">
+                            <td><i class="fas fa-star fa-xs" id="product-star"></i></td>
                             <td><img src="./images/watch4.png" alt=""> </td>
                             <td>
                                 <h3>ALFRED SUNG</h3>
@@ -245,8 +298,39 @@
                             </td>
                             <td><i class="fas fa-chevron-down"></i></td>
                         </tr>
-                        <tr class="table-row4">
-                            <td><i class="far fa-star fa-xs"></i></td>
+                        <tr id="ei3" style="display: none;">
+                            <td  colspan="9" >
+                                <div class="extra-info-parts">
+                                    <div>
+                                        <div class="extra-info-links">
+                                            <button><a href="#"><img src="./images/something2.png" alt=""></a> </button>
+                                            <button><a href="#"><img src="./images/something1.png" alt=""></a> </button>
+                                            <button><a href="#"><img src="./images/something3.png" alt=""></a></button>
+                                            <button><a href="#"><img src="./images/something4.png" alt=""></a></button>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <p>Color: Black <i class="fas fa-circle show-color"></i></p>
+                                    </div>
+                                    <div>
+                                        <p>Band: Solid </p>
+                                    </div>
+                                    <div>
+                                        <p>Case / bezel material: Titanium / Cobarion</p>
+                                    </div>
+                                    <div>
+                                        <p>Features: GPS, Waterproof, Bluetooth</p>
+                                    </div>
+                                    <div>
+                                        <button class="extra-info-external-link"><a href="https://www.google.com/?hl=sr" target="_blank"><i class="fas fa-external-link-alt"></i></a></button>
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-row4" onclick="toggleExtraInfo('ei4', this)">
+                            <td><i class="far fa-star fa-xs" id="product-star"></i></td>
                             <td><img src="./images/watch5.png" alt=""> </td>
                             <td>
                                 <h3>WRANGLER</h3>
@@ -270,8 +354,39 @@
                             </td>
                             <td><i class="fas fa-chevron-down"></i></td>
                         </tr>
-                        <tr class="table-row5">
-                            <td><i class="far fa-star fa-xs"></i></td>
+                        <tr id="ei4" style="display: none;">
+                            <td  colspan="9" >
+                                <div class="extra-info-parts">
+                                    <div>
+                                        <div class="extra-info-links">
+                                            <button><a href="#"><img src="./images/something2.png" alt=""></a> </button>
+                                            <button><a href="#"><img src="./images/something1.png" alt=""></a> </button>
+                                            <button><a href="#"><img src="./images/something3.png" alt=""></a></button>
+                                            <button><a href="#"><img src="./images/something4.png" alt=""></a></button>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <p>Color: Black <i class="fas fa-circle show-color"></i></p>
+                                    </div>
+                                    <div>
+                                        <p>Band: Solid </p>
+                                    </div>
+                                    <div>
+                                        <p>Case / bezel material: Titanium / Cobarion</p>
+                                    </div>
+                                    <div>
+                                        <p>Features: GPS, Waterproof, Bluetooth</p>
+                                    </div>
+                                    <div>
+                                        <button class="extra-info-external-link"><a href="https://www.google.com/?hl=sr" target="_blank"><i class="fas fa-external-link-alt"></i></a></button>
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-row5" onclick="toggleExtraInfo('ei5', this)">
+                            <td><i class="far fa-star fa-xs" id="product-star"></i></td>
                             <td><img src="./images/watch6.png" alt=""> </td>
                             <td>
                                 <h3>ALFRED SUNG</h3>
@@ -291,12 +406,43 @@
                             </td>
                             <td>
                                 
-                                <div><i class="fas fa-shopping-cart"></i> OUT OF STOCK</div>
+                                <div id="out-of-stock"><img src="./images/xcart.png" alt=""> <span>OUT OF STOCK</span> </div>
                             </td>
                             <td><i class="fas fa-chevron-down"></i></td>
                         </tr>
-                        <tr class="table-row6">
-                            <td><i class="far fa-star fa-xs"></i></td>
+                        <tr id="ei5" style="display: none;">
+                            <td  colspan="9" >
+                                <div class="extra-info-parts">
+                                    <div>
+                                        <div class="extra-info-links">
+                                            <button><a href="#"><img src="./images/something2.png" alt=""></a> </button>
+                                            <button><a href="#"><img src="./images/something1.png" alt=""></a> </button>
+                                            <button><a href="#"><img src="./images/something3.png" alt=""></a></button>
+                                            <button><a href="#"><img src="./images/something4.png" alt=""></a></button>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <p>Color: Black <i class="fas fa-circle show-color"></i></p>
+                                    </div>
+                                    <div>
+                                        <p>Band: Solid </p>
+                                    </div>
+                                    <div>
+                                        <p>Case / bezel material: Titanium / Cobarion</p>
+                                    </div>
+                                    <div>
+                                        <p>Features: GPS, Waterproof, Bluetooth</p>
+                                    </div>
+                                    <div>
+                                        <button class="extra-info-external-link"><a href="https://www.google.com/?hl=sr" target="_blank"><i class="fas fa-external-link-alt"></i></a></button>
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-row6" onclick="toggleExtraInfo('ei6', this)">
+                            <td><i class="far fa-star fa-xs" id="product-star"></i></td>
                             <td><img src="./images/watch7.png" alt=""> </td>
                             <td>
                                 <h3>GARMIN</h3>
@@ -318,6 +464,37 @@
                                 <div><button class="add-to-cart-button">ADD <i class="fas fa-shopping-cart"></i></button></div>
                             </td>
                             <td><i class="fas fa-chevron-down"></i></td>
+                        </tr>
+                        <tr id="ei6" style="display: none;">
+                            <td  colspan="9" >
+                                <div class="extra-info-parts">
+                                    <div>
+                                        <div class="extra-info-links">
+                                            <button><a href="#"><img src="./images/something2.png" alt=""></a> </button>
+                                            <button><a href="#"><img src="./images/something1.png" alt=""></a> </button>
+                                            <button><a href="#"><img src="./images/something3.png" alt=""></a></button>
+                                            <button><a href="#"><img src="./images/something4.png" alt=""></a></button>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <p>Color: Black <i class="fas fa-circle show-color"></i></p>
+                                    </div>
+                                    <div>
+                                        <p>Band: Solid </p>
+                                    </div>
+                                    <div>
+                                        <p>Case / bezel material: Titanium / Cobarion</p>
+                                    </div>
+                                    <div>
+                                        <p>Features: GPS, Waterproof, Bluetooth</p>
+                                    </div>
+                                    <div>
+                                        <button class="extra-info-external-link"><a href="https://www.google.com/?hl=sr" target="_blank"><i class="fas fa-external-link-alt"></i></a></button>
+                                    </div>
+
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -393,7 +570,7 @@
         </div>
 
         <div class="copyrights">
-            <i class="far fa-copyright fa-xs"></i> DEVTEST -- 2019 All Right Reserved.
+            <i class="far fa-copyright fa-xs"></i> <span>DEVTEST</span> -- 2019 All Right Reserved.
         </div>
 
         
