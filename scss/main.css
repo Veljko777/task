@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Butler;
+  src: url(./fonts/Butler_Regular.otf);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -98,7 +103,7 @@ hr {
 #cart-items-list .cart-grid .edge {
   color: white;
   position: absolute;
-  top: -37%;
+  top: -40px;
   right: 4.25%;
   z-index: 1;
   font-size: 64px;
@@ -127,6 +132,87 @@ hr {
   left: 46%;
   padding: 1px 5px 2px 5px;
   border-radius: 50%;
+}
+
+#sidebar-cart {
+  -webkit-box-shadow: 0px 0px 20px #dfd3c781;
+          box-shadow: 0px 0px 20px #dfd3c781;
+  display: none;
+  position: fixed;
+  top: 77px;
+  right: 0%;
+  background-color: white;
+  border-left: 1px solid #ddccb8;
+  z-index: 20;
+  min-width: 25%;
+}
+
+#sidebar-cart h4 {
+  color: #304061;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+#sidebar-cart hr {
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.308);
+  margin-right: 3%;
+}
+
+#sidebar-cart .sidebar-grid {
+  padding-left: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 40% 30% 20%;
+      grid-template-columns: 10% 40% 30% 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sidebar-cart .sidebar-grid h3 {
+  font-size: 16px;
+}
+
+#sidebar-cart .sidebar-grid p {
+  margin: 0;
+  font-size: 12px;
+}
+
+#sidebar-cart .sidebar-grid .sidebar-price {
+  font-size: 12px;
+}
+
+#sidebar-cart .sidebar-footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+#sidebar-cart .sidebar-footer p {
+  margin: 0;
+  padding-left: 20px;
+  color: #304061;
+}
+
+#sidebar-cart .sidebar-footer p:nth-child(2) {
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
+#sidebar-cart .sidebar-footer button {
+  background-color: #304061;
+  color: white;
+  padding: 14px 25px;
+  cursor: pointer;
+  border: none;
 }
 
 .navbar {
@@ -221,8 +307,9 @@ hr {
 }
 
 .navbar .flex-container .nav-item-5 {
+  width: 121.64px;
   padding-left: 0;
-  padding-right: 29px;
+  padding-right: 0px;
   padding-top: 17px;
   height: 100%;
   border-right: 1px solid #e6e6e6;
@@ -382,13 +469,14 @@ hr {
 }
 
 .header .flex-container .header-item-2 .header-title {
-  font-family: 'Ibarra Real Nova', serif;
+  font-family: "Butler";
   max-width: 490px;
-  font-size: 81px;
+  font-size: 78px;
   color: #304061;
   line-height: 1.1;
-  padding: 17px 0px 58.5px 0px;
-  letter-spacing: 1.8px;
+  padding: 18px 0px 61.5px 2px;
+  letter-spacing: 4px;
+  line-height: 87px;
 }
 
 .header .flex-container .header-item-2 .explore-button {
@@ -538,15 +626,16 @@ hr {
   text-indent: 0;
 }
 
-.filter-section select {
+.filter-section .select {
   border: solid 1px #ddccb8;
   color: #b08b71;
-  font-size: 16px;
+  font-size: 15px;
+  letter-spacing: 1px;
   padding: 10px 0px 11px 9px;
   margin: 0px 15px 30px 15px;
 }
 
-.x-btn:after {
+.x-btn:after, #sidebar-cart .sidebar-x-btn:after {
   content: "\d7";
   font-size: 25px;
   color: #b08b71;
@@ -777,7 +866,7 @@ hr {
 }
 
 .collection table tbody .table-row3 img, .collection table tbody .table-row2 img {
-  padding-top: 6px;
+  padding-top: 7px;
   padding-left: 3px;
 }
 
@@ -786,7 +875,7 @@ hr {
 }
 
 .collection table tbody .table-row3 .table-subtext, .collection table tbody .table-row2 .table-subtext {
-  padding-bottom: 3px;
+  padding-bottom: 2px;
   padding-left: 0.5px;
 }
 
@@ -1008,7 +1097,12 @@ hr {
   font-size: 15px;
   font-weight: 700;
   border: none;
-  padding: 18px 22px 16px 30px;
+  cursor: pointer;
+  padding: 18px 25px 16px 30px;
+}
+
+.collection table tbody .add-to-cart-button i, .collection table tbody .added-to-cart-button i {
+  padding-left: 7px;
 }
 
 .collection table tbody .added-to-cart-button {
@@ -1231,9 +1325,11 @@ hr {
 
 .section-3 .section3-container .section3-text1 h1 {
   color: #ab866e;
-  font-size: 60px;
-  letter-spacing: 2.8px;
-  padding-left: 3px;
+  font-family: Butler;
+  font-size: 59px;
+  letter-spacing: 4.4px;
+  padding-left: 1px;
+  padding-top: 2px;
 }
 
 .section-3 .section3-container .section3-text1 p {
@@ -1255,9 +1351,11 @@ hr {
 
 .section-3 .section3-container .section3-text2 h1 {
   color: white;
-  font-size: 60px;
-  letter-spacing: 2.8px;
+  font-family: Butler;
+  font-size: 59px;
+  letter-spacing: 4.2px;
   padding-left: 1px;
+  padding-top: 3px;
 }
 
 .section-3 .section3-container .section3-text2 p {
@@ -1289,9 +1387,9 @@ footer {
 }
 
 .grid-footer h2 {
-  font-family: "Georgia", serif;
+  font-family: "Butler", serif;
   color: #304061;
-  font-size: 28px;
+  font-size: 27px;
 }
 
 .grid-footer .footer-item-1 {
@@ -1299,8 +1397,8 @@ footer {
 }
 
 .grid-footer .footer-item-1 .footer-links {
-  padding-left: 168px;
-  letter-spacing: 9.1px;
+  padding-left: 170px;
+  letter-spacing: 11.8px;
 }
 
 .grid-footer .footer-item-1 div {
@@ -1356,9 +1454,10 @@ footer {
 }
 
 .grid-footer .footer-item-2 h2 {
+  font-family: "Butler", serif;
   padding-bottom: 43px;
-  letter-spacing: 8.9px;
-  padding-left: 6px;
+  letter-spacing: 11.55px;
+  padding-left: 10px;
 }
 
 .grid-footer .footer-item-2 p {
@@ -1394,7 +1493,7 @@ footer {
 
 .grid-footer .footer-item-3 h2 {
   padding-left: 58px;
-  letter-spacing: 8.85px;
+  letter-spacing: 12.1px;
   padding-bottom: 66px;
 }
 
@@ -1427,6 +1526,7 @@ footer {
 
 .grid-footer .footer-item-3 .footer-button .footer-right-arrow {
   padding-left: 18px;
+  cursor: pointer;
 }
 
 .grid-footer .footer-line-1 {

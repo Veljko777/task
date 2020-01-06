@@ -1,0 +1,11 @@
+
+
+POCETAK
+    Da bi se dobila visina kao sto je na slici molim vas kliknite na drugi proizvod po redu u listi satova da se selektuje taj proizvod
+i da se otvore dodatne informacije o proizvodu i tada ce izgled biti kao na dostavljenoj slici. Takodje
+suma u headeru je na slici 11.800$, sto nije moguce dobiti ako se kupe 4 sata po 4200$ kao sto je na slici navedeno. Tako da sam postavio da je na pocetku
+cifra 0 i kolicinu drugog sata u listi satova umesto 4 zamenio sam 0 da nema kupljenih satova, da bi sve moglo da funkcionise kao sto je zahtevano da se pri kliku na dugme ADD kolicina pomnozi sa cenom i da se 
+upise u header. Da bi se dobila visina kao sto je na slici molim vas kliknite na drugi proizvod po redu da se otvore dodatne informacije o proizvodu i tada ce 
+izgled biti kao na dostavljenoj slici.
+Isto sam umesto 1 postavio 0 za pocetnu vrednost na korpi, tako da kada bude dodat prvi proizvod sve ce izgledati kao sa slike
+
