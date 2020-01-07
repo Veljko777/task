@@ -1,6 +1,6 @@
 @font-face {
   font-family: Butler;
-  src: url(./fonts/Butler_Regular.otf);
+  src: url(../fonts/Butler_Regular.otf);
 }
 
 * {
@@ -145,6 +145,7 @@ hr {
   border-left: 1px solid #ddccb8;
   z-index: 20;
   min-width: 25%;
+  color: #ab866e;
 }
 
 #sidebar-cart h4 {
@@ -163,8 +164,8 @@ hr {
   padding-left: 20px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10% 40% 30% 20%;
-      grid-template-columns: 10% 40% 30% 20%;
+  -ms-grid-columns: 10% 45% 25% 5% 15%;
+      grid-template-columns: 10% 45% 25% 5% 15%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -172,15 +173,28 @@ hr {
 
 #sidebar-cart .sidebar-grid h3 {
   font-size: 16px;
+  margin: 0px;
+  color: #304061;
+  padding-top: 15px;
 }
 
 #sidebar-cart .sidebar-grid p {
   margin: 0;
   font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 
 #sidebar-cart .sidebar-grid .sidebar-price {
-  font-size: 12px;
+  font-size: 14px;
+}
+
+#sidebar-cart .sidebar-grid .sidebar-inc-dec-buttons button {
+  display: block;
+  background-color: white;
+  color: #ab866e;
+  border: none;
+  cursor: pointer;
 }
 
 #sidebar-cart .sidebar-footer {
@@ -301,9 +315,22 @@ hr {
   position: relative;
 }
 
-.navbar .flex-container .nav-item-4 a {
+.navbar .flex-container .nav-item-4 button {
   font-size: 16px;
   color: #ab866e;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.navbar .flex-container .nav-item-4 button:focus {
+  outline: 0;
+}
+
+.navbar .flex-container .nav-item-4 button:hover {
+  text-shadow: 0px 0px 10px #ab866e;
 }
 
 .navbar .flex-container .nav-item-5 {

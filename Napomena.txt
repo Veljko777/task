@@ -1,4 +1,11 @@
-
+VAZNA NAPOMNA:
+Resopnsivnes nije uradjen iz razloga sto sam se pretezno fokusirao na maksimalnu preciznost slike, zbog toga bi trebalo dosta koda da se prepravlja jer
+ su svugde korisceni pikseli, kod bi bio zaista prevelik a ne verujem da je to u praksi potrebno. 
+ Takodje slika je takva da je skoro svaki detalj morao pojedinacno da se pozicionira, tako da to dodatno otezava responsivness.
+ Verujem da je to iz razloga da kandidat pokaze svoje sposobnosti u preciznosti.
+ Nadam se da sam ovim radom pokazao dovoljno i zahtevano znanje za front end poziciju. 
+ Nisam koristio bootstrap ili bilo kakve dodatne biblioteke bas iz razloga da bi pokazao svoje znanje, tako da se nadam da cete to gledati kao
+ plus a ne kao nedostatak. Bootstrap koristim redovno, a responsivness imate mogucnost da vidite na svim mojim webaplikacijama koje sam do sad radio.
 
 POCETAK
     Da bi se dobila visina kao sto je na slici molim vas kliknite na drugi proizvod po redu u listi satova da se selektuje taj proizvod
@@ -7,5 +14,19 @@ suma u headeru je na slici 11.800$, sto nije moguce dobiti ako se kupe 4 sata po
 cifra 0 i kolicinu drugog sata u listi satova umesto 4 zamenio sam 0 da nema kupljenih satova, da bi sve moglo da funkcionise kao sto je zahtevano da se pri kliku na dugme ADD kolicina pomnozi sa cenom i da se 
 upise u header. Da bi se dobila visina kao sto je na slici molim vas kliknite na drugi proizvod po redu da se otvore dodatne informacije o proizvodu i tada ce 
 izgled biti kao na dostavljenoj slici.
-Isto sam umesto 1 postavio 0 za pocetnu vrednost na korpi, tako da kada bude dodat prvi proizvod sve ce izgledati kao sa slike
+Isto sam umesto 1 postavio 0 za pocetnu vrednost na korpi, tako da kada bude dodat prvi proizvod sve ce izgledati kao sa slike.
+
+
+Drugi sektor (lista satova) sam radio kao hardcoded html dokument, sto u praksi takodje znam da nije slucaj, jer se obicno koriste baze podataka pa 
+se izlistavaju proizvodi.
+To sam radio da bi maksimalno ispostovao pixel perfect princip.
+Mogao sam da uradim ja bazu podataka, ali ipak nisam jer mislim da nije neophodno za ovaj test posto to nije predmet testa, tako da vas
+molim da to ne gledate kao nedostatak.
+
+I sto se fontova tice, koristio sam najblize verzije shodno zahtevanim fontovima, tako da tu ima odstupanja, ali sam se trudio da tekst 
+pozicioniram maksimalno.
+
+Ako imate bilo kakvih dodatnih pitanja, stojim vam na raspolaganju. 
+Nadam se da ce ovaj zadatak zadovoljiti vase zahteve za front end poziciju i da cemo se vidjati u buducnosti.
+Pozdrav.
 

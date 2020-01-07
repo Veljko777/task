@@ -359,16 +359,15 @@ addToCartList=(event)=>{
 }
 
 showSidebar=()=>{
-
     if(sideBar.style.display==="block"){
         sideBar.style.display="none"
     }else{
     sideBar.style.display="block"
     }
-
 }
 
 addToSideBar=(event)=>{
+
     //create complete div for single product
 let sideBarDiv2=document.createElement("DIV")
 let sidebarDiv1=document.createElement("DIV")
@@ -377,32 +376,24 @@ let sidebarDiv3=document.createElement("DIV")
 sidebarDiv3.innerHTML=event.target.parentNode.parentNode.parentNode.children[4].innerHTML
 sidebarDiv3.classList.add("sidebar-price")
 let sidebarDiv4=document.createElement("DIV")
-sidebarDiv4.classList.add("inc-dec-button")
+let sidebarDiv5=document.createElement("DIV")
 let div4div1=document.createElement("DIV")
 let sidebarp2=document.createElement("P")
-    sidebarp2.classList.add("quantity")
+    sidebarp2.classList.add("sidebar-quantity")
     sidebarp2.innerHTML=event.target.parentNode.parentNode.parentNode.children[6].children[0].children[0].innerHTML
 let div4div2=document.createElement("DIV")
 let divbtn1=document.createElement("BUTTON")
     divbtn1.classList.add("sidebar-plus-btn")
-    divbtn1.onclick=()=>{
-        document
-        console.log(event.target.parentNode.parentNode.parentNode.children[0].children[0])
-        let innerQty=event.target.parentNode.parentNode.parentNode.children[0].children[0].innerHTML
-        let sum=parseInt(innerQty)+1
-        event.target.parentNode.parentNode.parentNode.children[0].children[0].innerHTML=sum
-    }
 let divbtn2=document.createElement("BUTTON")
     divbtn2.classList.add("sidebar-minus-btn")
-
     divbtn2.innerHTML='<i class="fas fa-chevron-down"></i>'
     divbtn1.innerHTML='<i class="fas fa-chevron-up" ></i>'
     div4div2.appendChild(divbtn1)
     div4div2.appendChild(divbtn2)
     div4div1.appendChild(sidebarp2)
     sidebarDiv4.appendChild(div4div1)
-    sidebarDiv4.appendChild(div4div2)
-    
+    sidebarDiv5.appendChild(div4div2)
+    sidebarDiv5.classList.add("sidebar-inc-dec-buttons")
     let h3=document.createElement("H3")
     h3.innerHTML=event.target.parentNode.parentNode.parentNode.children[2].children[0].innerHTML
     let p=document.createElement("P")
@@ -413,4 +404,7 @@ sideBarList.appendChild(sidebarDiv1)
 sideBarList.appendChild(sideBarDiv2)
 sideBarList.appendChild(sidebarDiv3)
 sideBarList.appendChild(sidebarDiv4)
+sideBarList.appendChild(sidebarDiv5)
+
+
 }

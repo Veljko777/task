@@ -1,9 +1,8 @@
 
 @font-face{
     font-family: Butler;
-    src: url(./fonts/Butler_Regular.otf);
+    src: url(../fonts/Butler_Regular.otf);
 }
-
 
 @mixin rightBorder (){
     border-right: 1px solid #e6e6e6;
@@ -53,7 +52,6 @@ hr{
 #active-dot{
     transform: scale(1.4);
     color: #9f765a;
-    
 }
 #cart-items-list{
     display: none;
@@ -152,6 +150,7 @@ hr{
     border-left: 1px solid #ddccb8;
     z-index: 20;
     min-width: 25%;
+    color: $secondary-color;
     h4{
         color: $primary-color;
         font-size: 18px;
@@ -168,17 +167,31 @@ hr{
     .sidebar-grid{
         padding-left: 20px;
         display: grid;
-        grid-template-columns: 10% 40% 30% 20%;
+        grid-template-columns: 10% 45% 25% 5% 15%;
         align-items: center;
         h3{
             font-size: 16px;
+            margin:0px;
+            color: $primary-color;
+            padding-top: 15px;
         }
         p{
             margin: 0;
             font-size: 12px;
+            padding-top:10px;
+            padding-bottom: 15px;
         }
         .sidebar-price{
-            font-size: 12px;
+            font-size: 14px;
+        }
+        .sidebar-inc-dec-buttons{
+            button{
+                display: block;
+                background-color: white;
+                color: $secondary-color;
+                border:none;
+                cursor: pointer;
+            }
         }
     }
     .sidebar-footer{
@@ -259,9 +272,20 @@ hr{
             .nav-item-4{
                 @include position(32px, 43px, 29px);
                 position: relative;
-                a{
+                button{
                     font-size: 16px;
                     color: $secondary-color;
+                    padding-left: 0;
+                    padding-right: 0;
+                    border:none;
+                    background-color:white;
+                    cursor: pointer;
+                }
+                button:focus{
+                    outline:0;
+                }
+                button:hover{
+                    text-shadow: 0px 0px 10px $secondary-color;
                 }
             }
             .nav-item-5{
@@ -1304,4 +1328,3 @@ footer{
     }
 
 }
-
