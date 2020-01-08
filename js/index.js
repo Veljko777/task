@@ -6,8 +6,11 @@ const sticky = navbar.offsetTop;
 function myFunction() {
   if (window.pageYOffset > sticky) {
     navbar.classList.add("sticky");
+    document.querySelector("header").style.marginTop="60px"
+
   } else {
     navbar.classList.remove("sticky");
+    document.querySelector("header").style.marginTop="0px"
   }
 }
 
@@ -57,6 +60,7 @@ let data=[
 ]
 
 //slideshow
+const dropdownManu=document.querySelector("#dropdown-manu")
 const arrowLeft=document.querySelector(".slideshow-btn1")
 const arrowRight=document.querySelector(".slideshow-btn2")
 const mainPicture=document.querySelector(".main-slideshow-image")
@@ -77,6 +81,17 @@ const totalSidebarSum=document.querySelector(".total-sidebar-sum")
 let slideShowImage=document.querySelector(".current-slideshow-image")
 let currentIndex=0;
 
+toggleDropdown=()=>{
+    if(dropdownManu.style.display==="none"){
+
+        dropdownManu.style.display="flex"
+    }else{
+        dropdownManu.style.display="none"
+    }
+    if(sideBar.style.display==="block"){
+        sideBar.style.display="none"
+    }
+}
 
 previousPreview=()=>{
     if(currentIndex-1<0){
@@ -275,6 +290,9 @@ for(i=0;i<addToChartButtons.length;i++){
                 cartItemsNumber.innerHTML=qty
                 cartItemsPreview.style.display="block"
                 cartItemsPreview.classList.add("fade-in")
+                if(document.querySelector("#sidebar-cart").style.display==="block"){
+                    document.querySelector("#sidebar-cart").style.display="none"
+                }
                 
                 setTimeout(()=>{
                     cartItemsPreview.classList.remove("fade-in")
@@ -286,15 +304,9 @@ for(i=0;i<addToChartButtons.length;i++){
                 },4000)
                 addToSideBar(event);
                 totalSidebarSum.innerHTML=total
-                
             }
-
-           
         }else{
             changeAddedButton(event)
-            // qty--
-            // cartItemsNumber.innerHTML=qty
-      
         }
     })}
 
@@ -363,6 +375,9 @@ showSidebar=()=>{
         sideBar.style.display="none"
     }else{
     sideBar.style.display="block"
+
+    sidebarButtons()
+    deleteItemfromSideBar()
     }
 }
 
@@ -400,11 +415,83 @@ let divbtn2=document.createElement("BUTTON")
     p.innerHTML=event.target.parentNode.parentNode.parentNode.children[2].children[1].innerHTML
     sideBarDiv2.appendChild(h3)
     sideBarDiv2.appendChild(p)
-sideBarList.appendChild(sidebarDiv1)
-sideBarList.appendChild(sideBarDiv2)
-sideBarList.appendChild(sidebarDiv3)
-sideBarList.appendChild(sidebarDiv4)
-sideBarList.appendChild(sidebarDiv5)
+    let mainDiv=document.createElement("DIV")
 
+mainDiv.appendChild(sidebarDiv1)
+mainDiv.appendChild(sideBarDiv2)
+mainDiv.appendChild(sidebarDiv3)
+mainDiv.appendChild(sidebarDiv4)
+mainDiv.appendChild(sidebarDiv5)
+mainDiv.classList.add("sidebar-div")
+sideBarList.appendChild(mainDiv)
 
 }
+
+sidebarButtons=()=>{
+    let sidebarPlusButton=document.querySelectorAll(".sidebar-plus-btn")
+    for(let i=0; i<sidebarPlusButton.length; i++){
+        sidebarPlusButton[i].addEventListener("click", ()=>{
+            sidebarQtyIncHelper(event)
+            
+        })
+    }
+    let sidebarMinusButton=document.querySelectorAll(".sidebar-minus-btn")
+    for(let i=0; i<sidebarMinusButton.length; i++){
+        sidebarMinusButton[i].addEventListener("click", ()=>{
+            sidebarQtyDecHelper(event)
+        })
+    }
+}  
+deleteItemfromSideBar=()=>{
+    let sidebarXButton=document.querySelectorAll(".sidebar-x-btn")
+    for(let i=0; i<sidebarXButton.length; i++){
+        sidebarXButton[i].addEventListener("click", ()=>{
+            deleteHelper(event)
+        })
+    }
+}
+
+sidebarQtyIncHelper=(event)=>{
+    let qty=parseInt(event.target.parentNode.parentNode.parentNode.parentNode.children[3]. children[0].children[0].innerHTML)
+    let priceAsString=event.target.parentNode.parentNode.parentNode.parentNode.children[2].innerHTML
+    let price=parseInt(priceAsString.replace(/\D/g,''))/100
+    let sidebarSum=document.querySelector(".total-sidebar-sum").innerHTML
+    let previousSum=parseInt(sidebarSum.replace(/\D/g,''))
+    let sum=previousSum+price
+    let total=sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    document.querySelector(".total-sidebar-sum").innerHTML=total
+    event.target.parentNode.parentNode.parentNode.parentNode.children[3]. children[0].children[0].innerHTML=qty+1
+    document.querySelector(".total-sum").innerHTML=document.querySelector(".total-sidebar-sum").innerHTML
+}
+sidebarQtyDecHelper=(event)=>{
+    let qty=parseInt(event.target.parentNode.parentNode.parentNode.parentNode.children[3]. children[0].children[0].innerHTML)
+    if(qty>0){
+        let priceAsString=event.target.parentNode.parentNode.parentNode.parentNode.children[2].innerHTML
+        let price=parseInt(priceAsString.replace(/\D/g,''))/100
+        let sidebarSum=document.querySelector(".total-sidebar-sum").innerHTML
+        let previousSum=parseInt(sidebarSum.replace(/\D/g,''))
+        let sum=previousSum-price
+        let total=sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        document.querySelector(".total-sidebar-sum").innerHTML=total
+        event.target.parentNode.parentNode.parentNode.parentNode.children[3]. children[0].children[0].innerHTML=qty-1
+        document.querySelector(".total-sum").innerHTML=document.querySelector(".total-sidebar-sum").innerHTML
+    }else{
+        return
+    }
+}
+
+deleteHelper=(event)=>{
+    let qty=parseInt(event.target.parentNode.children[3].children[0].children[0].innerHTML)
+    let sidebarSum=document.querySelector(".total-sidebar-sum").innerHTML
+    let previousSum=parseInt(sidebarSum.replace(/\D/g,''))
+    let priceString=event.target.parentNode.children[2].innerHTML
+    let price=parseInt(priceString.replace(/\D/g,''))/100
+    let sum=qty*price
+    let total=previousSum-sum
+    let totalString=total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    document.querySelector(".total-sidebar-sum").innerHTML=totalString
+    document.querySelector("#cart-items-number").innerHTML=document.querySelector("#cart-items-number").innerHTML-1
+    document.querySelector(".total-sum").innerHTML=document.querySelector(".total-sidebar-sum").innerHTML
+    event.target.parentNode.remove()
+}
+
