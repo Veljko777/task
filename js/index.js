@@ -6,8 +6,11 @@ const sticky = navbar.offsetTop;
 function myFunction() {
   if (window.pageYOffset > sticky) {
     navbar.classList.add("sticky");
-    document.querySelector("header").style.marginTop="60px"
-
+    if(window.innerWidth>1199){
+        document.querySelector("header").style.marginTop="77px"
+    }else{
+        document.querySelector("header").style.marginTop="60px"
+    }
   } else {
     navbar.classList.remove("sticky");
     document.querySelector("header").style.marginTop="0px"
