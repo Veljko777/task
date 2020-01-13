@@ -580,8 +580,8 @@ hr {
 .filter-section {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[6];
-      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 #search-bar {
@@ -862,8 +862,8 @@ hr {
 #ei2 .extra-info-parts, #ei1 .extra-info-parts, #ei3 .extra-info-parts, #ei4 .extra-info-parts, #ei5 .extra-info-parts, #ei6 .extra-info-parts {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[6];
-      grid-template-columns: repeat(6, auto);
+  -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
 }
 
 #ei2 .extra-info-links, #ei1 .extra-info-links, #ei3 .extra-info-links, #ei4 .extra-info-links, #ei5 .extra-info-links, #ei6 .extra-info-links {
@@ -1519,6 +1519,19 @@ footer {
   }
 }
 
+@media only screen and (min-width: 1900px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  body {
+    overflow-x: hidden;
+    width: auto;
+  }
+}
+
 @media only screen and (max-width: 1199px) {
   body {
     width: 100%;
@@ -1720,8 +1733,8 @@ footer {
     font-size: 20px;
   }
   .selected-filters {
-    -ms-grid-columns: (1fr)[6];
-        grid-template-columns: repeat(6, 1fr);
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
   .selected-filters li {
     -ms-grid-columns: 80% 20% !important;

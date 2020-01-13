@@ -469,7 +469,7 @@ animation-duration: 2s;
 }
 .filter-section{
     display: grid;
-    grid-template-columns: repeat(6, 1fr) ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
 }
 
 #search-bar{
@@ -685,7 +685,8 @@ animation-duration: 2s;
     
     .extra-info-parts{
         display: grid;
-        grid-template-columns: repeat(6, auto);
+        grid-template-columns: auto auto auto auto auto auto;
+
     }
     .extra-info-links{
         display: grid;
@@ -1377,7 +1378,17 @@ footer{
     }
 
 }
-
+@media only screen and (min-width:1900px){
+    body{
+        overflow-x: hidden;
+    }
+}
+@media only screen and (min-width:1921px){
+    body{
+        overflow-x: hidden;
+        width:auto;
+    }
+}
 @media only screen and (max-width: 1199px) {
     body{
         width:100%;
@@ -1567,7 +1578,7 @@ footer{
         font-size: 20px ;
     }
     .selected-filters{
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         li{
             grid-template-columns: 80% 20% !important;
             p{
